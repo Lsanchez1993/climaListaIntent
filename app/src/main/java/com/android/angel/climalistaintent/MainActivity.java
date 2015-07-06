@@ -2,6 +2,7 @@ package com.android.angel.climalistaintent;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.widget.Button;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.AdapterView.OnItemClickListener;
 import android.os.Bundle;
@@ -43,7 +44,7 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> a, View view, int position, long id) {
                 Categoria clickedCar = categoria.get(position);
 
-                Intent nuevo = new Intent(MainActivity.this,NuevaVentana.class);
+                Intent nuevo = new Intent(MainActivity.this, NuevaVentana.class);
                 String titulo = clickedCar.getTitulo();
                 String subtitulo = clickedCar.getSubtitulo();
                 int foto = clickedCar.getImagen();
@@ -54,12 +55,10 @@ public class MainActivity extends Activity {
                 //Toast.makeText(getApplicationContext(), categoria.get(position).toString(), Toast.LENGTH_SHORT).show();
                 //Intent i =new Intent(MainActivity.this,NuevaVentana.class);
                 //i.putExtra("titulo", "titulo");
-               //startActivity(i);
+                //startActivity(i);
 
             }
         });
-
-
     }
 
     @Override
