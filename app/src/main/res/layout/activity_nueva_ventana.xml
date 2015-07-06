@@ -10,11 +10,35 @@
     tools:context="com.android.angel.climalistaintent.NuevaVentana">
 
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="12dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

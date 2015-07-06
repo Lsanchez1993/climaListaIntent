@@ -17,12 +17,22 @@ public class NuevaVentana extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nueva_ventana);
 
-        TextView texto=(TextView) findViewById(R.id.titulo);
+        TextView a=(TextView) findViewById(R.id.titulo);
+        TextView d=(TextView) findViewById(R.id.subtitulo);
+        ImageView imageView=(ImageView) findViewById(R.id.imagen);
+        Bundle b= getIntent().getExtras();
+        String titulo = b.getString("titulo");
+        String subtitulo = b.getString("subtitulo");
+        int foto = b.getInt("imagen");
 
-        Bundle bd= getIntent().getExtras();
-        String titulo = bd.getString("titulo");
+        a.setText(titulo);
+        d.setText(subtitulo);
+        imageView.setImageResource(foto);
+        //String id=getIntent().getExtras().getString("id");
+        //Bundle bd= getIntent().getExtras();
+        //String titulo = bd.getString("titulo");
 
-        texto.setText(titulo);
+        //texto.setText(id);
 
     }
 

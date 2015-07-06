@@ -3,6 +3,7 @@ package com.android.angel.climalistaintent;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.AdapterView.OnItemClickListener;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,7 +41,15 @@ public class MainActivity extends Activity {
         listado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View view, int position, long id) {
+                Categoria clickedCar = categoria.get(position);
+
                 Intent nuevo = new Intent(MainActivity.this,NuevaVentana.class);
+                String titulo = clickedCar.getTitulo();
+                String subtitulo = clickedCar.getSubtitulo();
+                int foto = clickedCar.getImagen();
+                nuevo.putExtra("titulo", titulo);
+                nuevo.putExtra("subtitulo", subtitulo);
+                nuevo.putExtra("imagen", foto);
                 startActivity(nuevo);
                 //Toast.makeText(getApplicationContext(), categoria.get(position).toString(), Toast.LENGTH_SHORT).show();
                 //Intent i =new Intent(MainActivity.this,NuevaVentana.class);
